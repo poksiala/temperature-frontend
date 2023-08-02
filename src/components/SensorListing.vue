@@ -47,7 +47,7 @@ onMounted(() => {
     <button @click="editMode = !editMode">Toggle edit mode</button>
     <p v-if="loading">Loading...</p>
     <p v-else-if="error">Error: {{ errorMessage }}</p>
-    <p v-else-if="!editMode && selected.size === 0">
+    <p class="blueish" v-else-if="!editMode && selected.size === 0">
       No sensors selected. Start by pressing "Toggle edit mode"
     </p>
 
@@ -71,6 +71,10 @@ onMounted(() => {
   align-items: left;
   justify-content: left;
   padding-left: 2em;
+}
+
+.blueish {
+  color: rgb(79, 79, 197);
 }
 
 button {
