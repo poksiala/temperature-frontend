@@ -47,6 +47,9 @@ onMounted(() => {
     <button @click="editMode = !editMode">Toggle edit mode</button>
     <p v-if="loading">Loading...</p>
     <p v-else-if="error">Error: {{ errorMessage }}</p>
+    <p v-else-if="!editMode && selected.size === 0">
+      No sensors selected. Start by pressing "Toggle edit mode"
+    </p>
 
     <template v-else v-for="entry in data" :key="entry.mac">
       <SensorEntry
