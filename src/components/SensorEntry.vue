@@ -22,9 +22,9 @@ const mac = computed(() =>
 )
 const title = computed(() => alias.value ?? mac.value)
 
-const temperature = computed(() => String(props.data.temperature / 100) + ' °C')
-
-const humidity = computed(() => String(props.data.humidity / 100) + ' %')
+// always show two decimals
+const temperature = computed(() => (props.data.temperature / 100).toFixed(2) + ' °C')
+const humidity = computed(() => String((props.data.humidity / 100).toFixed(2)) + ' %')
 
 const timeSince = computed(() => {
   const seconds = Math.floor((Date.now() - props.data.ts * 1000) / 1000)
