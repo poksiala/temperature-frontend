@@ -6,5 +6,5 @@ import SensorListing from './components/SensorListing.vue'
   <main>
     <SensorListing />
   </main>
+  <p><em>This site does not use any cookies.</em></p>
 </template>
-
