@@ -67,7 +67,7 @@ const submitName = () => {
 
 <template>
   <div :class="props.visible ? '' : 'hidden'">
-    <h2 :class="props.visible ? '' : 'hidden'" >{{ title }}</h2>
+    <h2 :class="props.visible ? '' : 'hidden'">{{ title }}</h2>
     <input
       v-if="editMode && renameMode"
       v-model="alias"
@@ -90,8 +90,6 @@ const submitName = () => {
 </template>
 
 <style scoped>
-
-
 .hidden {
   color: gray;
 }
