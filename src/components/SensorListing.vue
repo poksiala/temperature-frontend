@@ -26,7 +26,7 @@ const toggleSelected = (mac: string) => {
 }
 
 const fetchAndUpdate = () => {
-  fetch('https://temperature.atk.works/api/v0/measurements')
+  fetch('https://api.atk.works/temps/v0/measurements')
     .then((response) => response.json())
     .then((json) => (data.value = json))
     .catch((err) => {
